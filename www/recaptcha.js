@@ -18,7 +18,7 @@ var recaptcha = {
 // Similar method to ionic-native, add the service if ng1 is active here.
 if (window.angular) {
   window.angular
-    .module('cordova.recaptcha',[])
+    .module('cordova.recaptcha', [])
     .service('$cordovaRecaptcha', ['$q', function($q){
       return {
         verify: function(site_key) {

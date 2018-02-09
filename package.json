@@ -1,5 +1,5 @@
 {
-  "name": "cordova-recaptcha",
+  "name": "cordova-plugin-recaptcha",
   "version": "1.0.0",
   "description": "A plugin that allows us to use the reCAPTCHA Android API",
   "main": "www/recaptcha.js",
