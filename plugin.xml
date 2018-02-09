@@ -16,10 +16,10 @@
         
         <config-file target="config.xml" parent="/*">
             <feature name="Recaptcha">
-                <param name="android-package" value="com.codesthings.Recaptcha"/>
+                <param name="android-package" value="com.packtpub.Recaptcha"/>
             </feature>
         </config-file>
 
-        <source-file src="src/android/Recaptcha.java" target-dir="src/com/codesthings" />
+        <source-file src="src/android/Recaptcha.java" target-dir="src/com/packtpub" />
     </platform>
 </plugin>
