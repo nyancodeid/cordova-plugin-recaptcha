@@ -1,9 +1,11 @@
-var exec = require('cordova/exec');
-
 // Old es5 method version of the plugin for plain cordova projects.
 var recaptcha = {
   verify: function(api_key, callback, fail) {
-    exec(function(result) {
+    if (!cordova || !cordova.exec) {
+      fail('Cannot find Cordova');
+      return;
+    }
+    cordova.exec(function(result) {
         if (typeof callback === 'function')
           callback(result);
       }, function(error) {

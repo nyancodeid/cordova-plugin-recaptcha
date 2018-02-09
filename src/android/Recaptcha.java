@@ -25,15 +25,19 @@ public class Recaptcha extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("verify")) {
-            String apiKey = args.getString(0);
-            this.verify(apiKey, callbackContext);
+        	try {
+            	String apiKey = args.getString(0);
+            	this.verify(apiKey, callbackContext);
+        	} catch(JSONException e){
+				callbackContext.error("Verify called without providing a Site Key");
+        	}
             return true;
         }
         return false;
     }
 
     private void verify(String apiKey, CallbackContext callbackContext) {
-        if (apiKey != null && apiKey.length() > 0) {
+        if (apiKey.length() > 0) {
             SafetyNet.getClient(cordova.getActivity())
                 .verifyWithRecaptcha(apiKey)
                 .addOnSuccessListener(cordova.getActivity(),
@@ -44,7 +48,7 @@ public class Recaptcha extends CordovaPlugin {
                             if (!userResponseToken.isEmpty()) {
                                 callbackContext.success(userResponseToken);
                             } else {
-                                callbackContext.error("Repsonse token was empty.")
+                                callbackContext.error("Repsonse token was empty.");
                             }
                         }
                     })
