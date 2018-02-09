@@ -1,0 +1,15 @@
+{
+  "name": "cordova-recaptcha",
+  "version": "1.0.0",
+  "description": "A plugin that allows us to use the reCAPTCHA Android API",
+  "main": "www/recaptcha.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cordova",
+    "recaptcha"
+  ],
+  "author": "James Macmillan",
+  "license": "UNLICENSED"
+}

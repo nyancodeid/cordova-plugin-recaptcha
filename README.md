@@ -1,2 +1,2 @@
-# cordova-plugin-recaptcha
-Cordova Recaptcha Plugin
+# Cordova Recaptcha Plugin
+
