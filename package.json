@@ -1,5 +1,5 @@
 {
-  "name": "cordova-plugin-recaptcha",
+  "name": "@packt/cordova-plugin-recaptcha",
   "version": "1.0.0",
   "description": "A cordova plugin for the reCAPTCHA Android API",
   "main": "www/recaptcha.js",
