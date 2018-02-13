@@ -1,15 +1,25 @@
 {
   "name": "cordova-plugin-recaptcha",
   "version": "1.0.0",
-  "description": "A plugin that allows us to use the reCAPTCHA Android API",
+  "description": "A cordova plugin for the reCAPTCHA Android API",
   "main": "www/recaptcha.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/packt-internal/cordova-plugin-recaptcha.git"
+  },
   "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
     "cordova",
     "recaptcha"
   ],
-  "author": "James Macmillan",
-  "license": "UNLICENSED"
+  "bugs": {
+    "url": "https://bitbucket.org/packt-internal/cordova-plugin-recaptcha/issues"
+  },
+  "homepage": "https://bitbucket.org/packt-internal/cordova-plugin-recaptcha",
+  "author": "James Macmillan <jamesm@packtpub.com>",
+  "license": "MIT"
 }
