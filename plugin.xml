@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="@packt/cordova-plugin-recaptcha" version="1.0.0">
+        id="cordova-plugin-recaptcha" version="1.0.2">
     <engines>
       <engine name="cordova-android" version=">=6.0.0" />
     </engines>
