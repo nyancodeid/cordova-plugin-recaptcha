@@ -3,7 +3,12 @@
 This is a cordova plugin to perform Google reCAPTCHA verify on Android using the android SafetyNet package.
 
 ## Installation
-cordova plugin add cordova-plugin-recaptcha
+```
+cordova plugin add https://bitbucket.org/packt-internal/cordova-plugin-recaptcha.git
+```
+
+__note:__ The plan is to publish this to the @packt npm org, however cordova-cli doesn't currently 
+support scoped plugins, [see Issue CB-12774](https://issues.apache.org/jira/browse/CB-12774).
 
 ## Usage
 
