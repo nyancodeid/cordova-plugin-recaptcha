@@ -23,7 +23,7 @@ import com.google.android.gms.tasks.*;
 public class Recaptcha extends CordovaPlugin {
 
     @Override
-    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+    public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
         if (action.equals("verify")) {
         	try {
             	String apiKey = args.getString(0);
@@ -36,7 +36,7 @@ public class Recaptcha extends CordovaPlugin {
         return false;
     }
 
-    private void verify(String apiKey, CallbackContext callbackContext) {
+    private void verify(String apiKey, final CallbackContext callbackContext) {
         if (apiKey.length() > 0) {
             SafetyNet.getClient(cordova.getActivity())
                 .verifyWithRecaptcha(apiKey)
@@ -48,7 +48,7 @@ public class Recaptcha extends CordovaPlugin {
                             if (!userResponseToken.isEmpty()) {
                                 callbackContext.success(userResponseToken);
                             } else {
-                                callbackContext.error("Repsonse token was empty.");
+                                callbackContext.error("Response token was empty.");
                             }
                         }
                     })
